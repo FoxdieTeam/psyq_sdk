@@ -17,7 +17,7 @@
  *
  *****************************************************************/
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 /* ----------------------------------------------------------------
@@ -481,7 +481,6 @@ extern void SpuGetReverbModeType (long *mode);
 extern void SpuGetReverbModeDepth (short *depth_left, short *depth_right);
 extern void SpuGetReverbModeDelayTime (long *delay);
 extern void SpuGetReverbModeFeedback (long *feedback);
-extern void SpuSetESA( long revAddr );
 #if defined(_LANGUAGE_C_PLUS_PLUS) || defined(__cplusplus) || defined(c_plusplus)
 }
 #endif

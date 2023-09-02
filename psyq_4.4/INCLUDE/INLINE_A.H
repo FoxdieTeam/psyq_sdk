@@ -1,4 +1,4 @@
-; $PSLibId: Run-time Library Release 4.7$
+; $PSLibId: Run-time Library Release 4.4$
 ;
 ;	Macro definitions of DMPSX version 3 for Assembler programs
 ;	inline_a.h

@@ -2,7 +2,7 @@
 #define _LIBGS_H_
 
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 /*
@@ -1011,6 +1011,7 @@ extern u_long PSDCNT;		/* frame counter for using matrix cache */
 extern _GsPOSITION POSITION;	/* 2d offset */
 extern DRAWENV GsDRAWENV;	/* DRAWENV of Gs */
 extern DISPENV GsDISPENV;	/* DISPENV of Gs */
+extern MATRIX GsLSMATRIX;	/* Local-Screen Matrix of Gs */
 extern MATRIX GsWSMATRIX;	/* Current World-Screen Matrix of Gs */
 extern MATRIX GsWSMATRIX_ORG;	/* Original World-Screen Matrix of Gs */
 extern long HWD0, VWD0;		/* rezolution of Holyzontal and Vertical */

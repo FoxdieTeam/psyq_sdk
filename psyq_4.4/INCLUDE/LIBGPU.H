@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.4$ */
 #ifndef _LIBGPU_H_
 #define _LIBGPU_H_
 /*
@@ -64,7 +64,7 @@
 /*
  *	Externals
  */
-extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
+extern	int (*GPU_printf)();	/* printf() object */
 
 /*
  *	Time-out Cycle
@@ -303,18 +303,8 @@ extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
 	) : ( \
 		(setlen(pt,0)) \
 	)
-
-#define setDrawStp(p, pbw) 				\
-        setlen(p, 2),					\
-        ((u_long *)p)[1] = 0xe6000000|(pbw?0x01:0),	\
-        ((u_long *)p)[2] = 0
-
-#define setDrawMode(p, dfe, dtd, tpage, tw) 		\
-        setlen(p, 2),					\
-        ((u_long *)p)[1] = _get_mode(dfe, dtd, tpage),	\
-        ((u_long *)p)[2] = _get_tw((RECT *)tw)
-
 	
+
 /*	Primitive 	Lentgh		Code				*/
 /*--------------------------------------------------------------------	*/
 /*									*/
@@ -749,7 +739,7 @@ extern u_long *ClearOTag(u_long *ot, int n);
 extern u_long *ClearOTagR(u_long *ot, int n);
 extern u_long *FntFlush(int id);
 extern u_long *KanjiFntFlush(int id);
-extern u_long DrawSyncCallback(void (*func)(void));
+extern u_long DrawSyncCallback(void (*func)());
 extern u_short GetClut(int x, int y) ;
 extern u_short GetTPage(int tp, int abr, int x, int y) ;
 extern u_short LoadClut(u_long *clut, int x, int y);

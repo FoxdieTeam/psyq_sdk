@@ -1,5 +1,5 @@
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 #ifndef _MCGUI_H_
 #define _MCGUI_H_
@@ -11,17 +11,15 @@
 #define MOUSE_LBUTTON	(0x08)
 #define MOUSE_RBUTTON	(0x04)
 
-#define MCGUI_INTERNAL_FONT	(0)
-#define MCGUI_EXTERNAL_FONT	(1)
 
-/* Texture Information Structure */
+/* TEXTURE情報構造体 */
 
 typedef struct {
 	unsigned long* addr;
 } sMcGuiTexture;
 
 
-/* Memory Card Information Structure */
+/* メモリーカード情報構造体 */
 
 typedef struct {
 	char file[21];
@@ -33,7 +31,7 @@ typedef struct {
 	unsigned long* dataAddr;
 } sMcGuiCards;
 
-/* BG Information Structure */
+/* BG 情報構造体 */
 
 typedef struct {
 	short mode;
@@ -42,8 +40,7 @@ typedef struct {
 	unsigned long* timadr;
 } sMcGuiBg;
 
-/* Cursor Information Structure */
-
+/* Cursor 情報構造体 */
 typedef struct {
 	char type;
 	unsigned char r;
@@ -51,7 +48,7 @@ typedef struct {
 	unsigned char b;
 } sMcGuiCursor;
 
-/* BGM,Sound Effects Information Structure */
+/* BGM、効果音 情報構造体 */
 
 typedef struct {
 	int MVOL;
@@ -78,7 +75,7 @@ typedef struct {
 	} se;
 } sMcGuiSnd;
 
-/* Controller Related Information Structure */
+/* コントローラ関連情報構造体 */
 
 typedef struct {
 	volatile unsigned char* buf[2];
@@ -105,28 +102,19 @@ typedef struct {
 } sMcGuiController;
 
 
-/* Memory Card Screen Configuration Structure */
+
+/* メモリーカード管理画面コンフィグ構造体 */
 
 typedef struct {
-	sMcGuiCards cards;		/* Memory Card Information */
-	sMcGuiBg bg;			/* BG Information */
-	sMcGuiController controller;	/* Controller Related Information */
-	sMcGuiSnd sound;		/* BGM Sound Effects Information */
-	sMcGuiTexture texture;		/* Texture Information */
-	sMcGuiCursor cursor;		/* Cursor Information */
+	sMcGuiCards cards;		/* メモリーカード情報 */
+	sMcGuiBg bg;			/* BG情報 */
+	sMcGuiController controller;	/* コントローラ関連情報 */
+	sMcGuiSnd sound;		/* ＢＧＭ効果音情報 */
+	sMcGuiTexture texture;		/* テクスチャ情報 */
+	sMcGuiCursor cursor;		/* カーソル情報 */
 } McGuiEnv;
-
-#if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
-extern "C" {
-#endif
 
 extern int McGuiSave(McGuiEnv* env);
 extern int McGuiLoad(McGuiEnv* env);
 
-int McGuiSetExternalFont(McGuiEnv* env, int mode);
-
-#if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
-}
-#endif
-
-#endif /* _MCGUI_H_ */
+#endif _MCGUI_H_

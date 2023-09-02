@@ -5,7 +5,7 @@
  * File:kernel.h 	Rev. 3
 */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 #ifndef _R3000_H
 #include <r3000.h>

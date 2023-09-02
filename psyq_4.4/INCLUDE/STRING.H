@@ -14,7 +14,7 @@
  *
  *****************************************************************/
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 #include <strings.h>

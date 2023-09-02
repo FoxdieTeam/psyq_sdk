@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.4$ */
 #ifndef _LIBCD_H_
 #define _LIBCD_H_
 /*

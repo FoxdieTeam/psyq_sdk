@@ -1,5 +1,5 @@
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 /*
  * File:stdio.h
@@ -31,15 +31,15 @@ typedef unsigned int size_t;  /* result type of the sizeof operator (ANSI) */
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {
 #endif
-extern int printf(const char *fmt, ...); /**/
-extern int sprintf(char *buffer, const char *fmt, ...);
+extern int printf(char *fmt, ...); /**/
+extern int sprintf(char *buffer, char *fmt, ...);
 
 extern char getc(int);		/**/
 extern char getchar(void);
 extern char *gets(char *);
 extern void putc(char, int);	/**/
 extern void putchar(char);
-extern void puts(const char *);
+extern void puts(char *);
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }
 #endif

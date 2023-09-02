@@ -4,7 +4,7 @@
  * $Id: errno.h,v 1.3 1995/02/28 10:02:53 yoshi Exp $
  */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 #ifndef	_ERRNO_H

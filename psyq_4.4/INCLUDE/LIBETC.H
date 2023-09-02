@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.4$ */
 #ifndef _LIBETC_H_
 #define _LIBETC_H_
 
@@ -68,7 +68,7 @@ int ResetCallback(void) ;
 int RestartCallback(void) ;
 int StopCallback(void) ;
 int VSync(int mode);
-int VSyncCallback(void (*f)(void)) ;
+int VSyncCallback(void (*f)()) ;
 long GetVideoMode (void);
 long SetVideoMode (long mode);
 u_long PadRead(int id);

@@ -2,7 +2,7 @@
  * File:stdlib.h
 */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 #ifndef _STDLIB_H
@@ -19,8 +19,7 @@
 extern "C" {
 #endif
 
-extern void *bsearch(const unsigned char *, const unsigned char *,
-				 size_t, size_t, int (*)());
+extern void *bsearch(unsigned char *, unsigned char *, size_t, size_t, int (*)());
 extern void exit();
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)

@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.4.1$ */
 /*
  * libds.h
  *	Copyright(C) 1996 1997, Sony Computer Entertainment Inc.
@@ -157,7 +157,7 @@ typedef struct {
 	u_long dummy1;
 	u_long dummy2;
 	DslLOC loc;
-} StHEADER;		/* CD-ROM STR structure */
+} StHEADER;		/* CD-ROM STR 構造体*/
 
 #define StFREE		0x0000
 #define StREWIND	0x0001
@@ -180,8 +180,9 @@ typedef struct {
 #define StMOVIE_WIDTH	0x08
 #define StMOVIE_HEIGHT	0x09
 
-/*
- * streaming library prototype declarations */
+/* 
+ * ストリーミングライブラリプロトタイプ宣言
+ */
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {
@@ -210,19 +211,19 @@ int StSetChannel( u_long channel );
 
 #endif	/* _LIBCD_H_ */
 
-/* **** system status **** */
+/* **** システムステータス *****/
 
 #define DslReady	1
 #define DslBusy		2
 #define DslNoCD		3
 
-/* **** maximum number of commands that can be added to the queue **** */
+/* **** キューに登録できるコマンドの最大数 *****/
 #define DslMaxCOMMANDS	8
 
-/***** maximum number of command execution results **** */
+/* **** コマンド実行結果の最大数 *****/
 #define DslMaxRESULTS	8
 
-/***** DS function prototype **** */
+/* **** DS 関数プロトタイプ *****/
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {

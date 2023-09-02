@@ -7,7 +7,7 @@
  *			All rights Reserved
  */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 #ifndef _KERNEL_H

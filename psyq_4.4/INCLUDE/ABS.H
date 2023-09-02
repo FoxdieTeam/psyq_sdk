@@ -2,7 +2,7 @@
  * File:abs.h
  */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.4$
  */
 
 #ifndef _ABS_H

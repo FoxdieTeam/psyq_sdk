@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.4$ */
 #ifndef _LIBPRESS_H_
 #define _LIBPRESS_H_
 /*
@@ -26,10 +26,9 @@ typedef struct {
     char   loop;		/* whether loop or not */
     char   byte_swap;		/* source data is 16-bit big endian (1) / little endian (0) */
     char   proceed;		/* proceeding ? whole (0) / start (1) / cont. (2) / end (4) */
-    char   quality;		/* quality ? middle (0) / high (1) */ 
+    char   pad4;		/* reserved */
 } ENCSPUENV;
-
-
+	
 #define ENCSPU_ENCODE_ERROR    (-1)
 #define ENCSPU_ENCODE_WHOLE     0
 #define ENCSPU_ENCODE_START    (1<<0)
@@ -41,10 +40,6 @@ typedef struct {
 
 #define ENCSPU_ENCODE_ENDIAN_LITTLE 0
 #define ENCSPU_ENCODE_ENDIAN_BIG    1
-
-#define ENCSPU_ENCODE_MIDDLE_QULITY 0
-#define ENCSPU_ENCODE_HIGH_QULITY   1
-
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {
@@ -66,7 +61,6 @@ extern int DecDCTinCallback(void (*func)());
 extern int DecDCToutCallback(void (*func)());
 
 extern long EncSPU (ENCSPUENV *env);
-extern long EncSPU2(ENCSPUENV *env);
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }
 #endif
