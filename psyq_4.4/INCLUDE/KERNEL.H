@@ -8,11 +8,11 @@
  * $PSLibId: Run-time Library Release 4.4$
  */
 #ifndef _R3000_H
-#include <r3000.h>
+#include <R3000.H>
 #endif
 
 #ifndef _ASM_H
-#include <asm.h>
+#include <ASM.H>
 #endif
 
 /* don't change these macros and structures which is refereced in kernel code */ 
