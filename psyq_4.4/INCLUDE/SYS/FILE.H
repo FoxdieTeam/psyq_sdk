@@ -8,7 +8,7 @@
 #ifndef _SYS_FILE_H
 #define _SYS_FILE_H
 
-#include <sys/fcntl.h>
+#include <SYS/FCNTL.H>
 
 /* Flag for open() */
 #define O_RDONLY        FREAD

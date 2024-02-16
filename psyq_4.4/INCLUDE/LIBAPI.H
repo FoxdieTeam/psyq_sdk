@@ -11,7 +11,7 @@
  */
 
 #ifndef _KERNEL_H
-#include "kernel.h"
+#include "KERNEL.H"
 #endif
 
 /* don't change these macros and structures which is referred in controler code */
