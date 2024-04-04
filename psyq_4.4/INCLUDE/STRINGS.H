@@ -20,7 +20,7 @@
 typedef unsigned int size_t;  /* result type of the sizeof operator (ANSI) */
 #endif
 
-#include <memory.h>
+#include <MEMORY.H>
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 extern "C" {
