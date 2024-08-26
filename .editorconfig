@@ -1,0 +1,6 @@
+root = true
+
+[*.{c,h}]
+tab_width       = 8
+indent_style    = tab
+indent_size     = tab
