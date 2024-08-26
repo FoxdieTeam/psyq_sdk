@@ -1,8 +1,0 @@
-[ccpsx]
-stdlib=libgs.lib libgte.lib libgpu.lib libspu.lib libsnd.lib libetc.lib libapi.lib libsn.lib libc.lib libcd.lib libcard.lib
-compiler_path=$PSYQ_PATH\bin
-assembler_path=$PSYQ_PATH\bin
-linker_path=$PSYQ_PATH\bin
-library_path=$PSYQ_PATH\lib
-c_include_path=$PSYQ_PATH\include
-cplus_include_path=$PSYQ_PATH\include
