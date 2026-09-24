@@ -1,5 +1,5 @@
 /*
- * $PSLibId: Run-time Library Release 4.7$ 
+ * $PSLibId: Run-time Library Release 4.3$ 
  */
 
 #ifndef _LIBGTE_H_
@@ -170,44 +170,44 @@ typedef struct {
 
 typedef struct {
 	SVECTOR v;
-	u_char uv[2]; u_short pad;	/*  */  
+	u_char uv[2]; u_short pad;	/*　　*/  
 	CVECTOR c;
 	DVECTOR sxy;		
-	u_long  sz;		/* clip z-data */		
-} RVECTOR;			/* division vertex data vector */
+	u_long  sz;		/*　clip z-data　*/		
+} RVECTOR;			/* 分割頂点情報ベクタ*/
 
 
 typedef struct {
 	RVECTOR r01,r12,r20;
 	RVECTOR	*r0,*r1,*r2;
 	u_long *rtn;
-} CRVECTOR3;			/* recursive vector for triangles */
+} CRVECTOR3;			/* ３角形用再帰ベクタ*/
 
 typedef struct {
-	u_long 	ndiv;		/* number of divisions */
-	u_long 	pih,piv;	/* clipping area */
+	u_long 	ndiv;		/* 分割数*/
+	u_long 	pih,piv;	/* クリップエリア*/
 	u_short clut,tpage;
 	CVECTOR	rgbc;
 	u_long	*ot;
 	RVECTOR r0,r1,r2;
 	CRVECTOR3 cr[5];	
-} DIVPOLYGON3;			/* division buffer for triangles */
+} DIVPOLYGON3;			/* ３角形用分割バッファ*/
 
 typedef struct {
 	RVECTOR r01,r02,r31,r32,rc;
 	RVECTOR	*r0,*r1,*r2,*r3;
 	u_long *rtn;
-} CRVECTOR4;			/* recursive vector for four-sided polygons */
+} CRVECTOR4;			/* ４角形用再帰ベクタ*/
 
 typedef struct {
-	u_long 	ndiv;		/* number of divisions */
-	u_long 	pih,piv;	/* clipping area */
+	u_long 	ndiv;		/* 分割数*/
+	u_long 	pih,piv;	/* クリップエリア*/
 	u_short clut,tpage;
 	CVECTOR	rgbc;
 	u_long	*ot;
 	RVECTOR r0,r1,r2,r3;
 	CRVECTOR4 cr[5];	
-} DIVPOLYGON4;			/* division buffer for four-sided polygons */
+} DIVPOLYGON4;			/* ４角形用分割バッファ*/
 
 typedef struct {
         short   xy[3];

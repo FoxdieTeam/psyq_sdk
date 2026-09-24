@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.3$ */
 #ifndef _LIBGPU_H_
 #define _LIBGPU_H_
 /*
@@ -64,7 +64,7 @@
 /*
  *	Externals
  */
-extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
+extern	int (*GPU_printf)();	/* printf() object */
 
 /*
  *	Time-out Cycle
@@ -108,10 +108,10 @@ extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
  *	Set Primitive Attributes
  */
 #define setTPage(p,tp,abr,x,y) \
-	((p)->tpage = getTPage(tp,abr,x,y))
+	((p)->tpage = GetTPage(tp,abr,x,y))
 
 #define setClut(p,x,y) \
-	((p)->clut = getClut(x,y))
+	((p)->clut = GetClut(x,y))
 					   
 /*
  * Set Primitive Colors
@@ -261,7 +261,7 @@ extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
 	 (((y)&0x200)<<2))
 
 #define getClut(x, y) \
-	(((y)<<6)|(((x)>>4)&0x3f))
+	((y<<6)|((x>>4)&0x3f))
 
 #define dumpTPage(tpage)						\
 	GPU_printf("tpage: (%d,%d,%d,%d)\n",				\
@@ -303,18 +303,8 @@ extern	int (*GPU_printf)(char *fmt, ...);	/* printf() object */
 	) : ( \
 		(setlen(pt,0)) \
 	)
-
-#define setDrawStp(p, pbw) 				\
-        setlen(p, 2),					\
-        ((u_long *)p)[1] = 0xe6000000|(pbw?0x01:0),	\
-        ((u_long *)p)[2] = 0
-
-#define setDrawMode(p, dfe, dtd, tpage, tw) 		\
-        setlen(p, 2),					\
-        ((u_long *)p)[1] = _get_mode(dfe, dtd, tpage),	\
-        ((u_long *)p)[2] = _get_tw((RECT *)tw)
-
 	
+
 /*	Primitive 	Lentgh		Code				*/
 /*--------------------------------------------------------------------	*/
 /*									*/
@@ -749,7 +739,7 @@ extern u_long *ClearOTag(u_long *ot, int n);
 extern u_long *ClearOTagR(u_long *ot, int n);
 extern u_long *FntFlush(int id);
 extern u_long *KanjiFntFlush(int id);
-extern u_long DrawSyncCallback(void (*func)(void));
+extern u_long DrawSyncCallback(void (*func)());
 extern u_short GetClut(int x, int y) ;
 extern u_short GetTPage(int tp, int abr, int x, int y) ;
 extern u_short LoadClut(u_long *clut, int x, int y);
@@ -816,7 +806,6 @@ extern void GetDrawMode(DR_MODE *p);
 extern void GetTexWindow(DR_TWIN *p);
 extern void GetDrawArea(DR_AREA *p);
 extern void GetDrawOffset(DR_OFFSET *p);
-extern void GetDrawEnv2(DR_ENV *p);
 
 #if defined(_LANGUAGE_C_PLUS_PLUS)||defined(__cplusplus)||defined(c_plusplus)
 }

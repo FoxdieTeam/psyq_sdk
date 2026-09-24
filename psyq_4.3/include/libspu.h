@@ -17,7 +17,7 @@
  *
  *****************************************************************/
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.3$
  */
 
 /* ----------------------------------------------------------------
@@ -132,23 +132,23 @@
 
 /* for Voice setting */
 
-#define	SPU_VOICE_VOLL		(0x01 <<  0) /* volume (left) */
-#define	SPU_VOICE_VOLR		(0x01 <<  1) /* volume (right) */
-#define	SPU_VOICE_VOLMODEL	(0x01 <<  2) /* volume mode (left) */
-#define	SPU_VOICE_VOLMODER	(0x01 <<  3) /* volume mode (right) */
-#define	SPU_VOICE_PITCH		(0x01 <<  4) /* tone (pitch setting) */
-#define	SPU_VOICE_NOTE		(0x01 <<  5) /* tone (note setting)  */
-#define	SPU_VOICE_SAMPLE_NOTE	(0x01 <<  6) /* waveform data sample note */
-#define	SPU_VOICE_WDSA		(0x01 <<  7) /* waveform data start address */
-#define	SPU_VOICE_ADSR_AMODE	(0x01 <<  8) /* ADSR Attack rate mode */
-#define	SPU_VOICE_ADSR_SMODE	(0x01 <<  9) /* ADSR Sustain rate mode */
-#define	SPU_VOICE_ADSR_RMODE	(0x01 << 10) /* ADSR Release rate mode */
+#define	SPU_VOICE_VOLL		(0x01 <<  0) /* 音量(左)                 */
+#define	SPU_VOICE_VOLR		(0x01 <<  1) /* 音量(右)                 */
+#define	SPU_VOICE_VOLMODEL	(0x01 <<  2) /* 音量モード(左)           */
+#define	SPU_VOICE_VOLMODER	(0x01 <<  3) /* 音量モード(右)           */
+#define	SPU_VOICE_PITCH		(0x01 <<  4) /* 音程 (ピッチ指定)        */
+#define	SPU_VOICE_NOTE		(0x01 <<  5) /* 音程 (ノート指定)        */
+#define	SPU_VOICE_SAMPLE_NOTE	(0x01 <<  6) /* 波形データサンプルノート */
+#define	SPU_VOICE_WDSA		(0x01 <<  7) /* 波形データ先頭アドレス   */
+#define	SPU_VOICE_ADSR_AMODE	(0x01 <<  8) /* ADSR Attack rate モード  */
+#define	SPU_VOICE_ADSR_SMODE	(0x01 <<  9) /* ADSR Sustain rate モード */
+#define	SPU_VOICE_ADSR_RMODE	(0x01 << 10) /* ADSR Release rate モード */
 #define	SPU_VOICE_ADSR_AR	(0x01 << 11) /* ADSR Attack rate         */
 #define	SPU_VOICE_ADSR_DR	(0x01 << 12) /* ADSR Decay rate          */
 #define	SPU_VOICE_ADSR_SR	(0x01 << 13) /* ADSR Sustain rate        */
 #define	SPU_VOICE_ADSR_RR	(0x01 << 14) /* ADSR Release rate        */
 #define	SPU_VOICE_ADSR_SL	(0x01 << 15) /* ADSR Sustain level       */
-#define	SPU_VOICE_LSAX		(0x01 << 16) /* start address for loop */
+#define	SPU_VOICE_LSAX		(0x01 << 16) /* ループ開始アドレス       */
 #define	SPU_VOICE_ADSR_ADSR1	(0x01 << 17) /* ADSR adsr1 for `VagAtr'  */
 #define	SPU_VOICE_ADSR_ADSR2	(0x01 << 18) /* ADSR adsr2 for `VagAtr'  */
 
@@ -169,28 +169,28 @@
 #define	SPU_DECODE_SECONDHALF	SPU_DECODED_SECONDHALF
 
 
-#define	SPU_COMMON_MVOLL		(0x01 <<  0) /* master volume (left) */
-#define	SPU_COMMON_MVOLR		(0x01 <<  1) /* master volume (right) */
-#define	SPU_COMMON_MVOLMODEL		(0x01 <<  2) /* master volume mode (left) */
-#define	SPU_COMMON_MVOLMODER		(0x01 <<  3) /* master volume mode (right) */
-#define	SPU_COMMON_RVOLL		(0x01 <<  4) /* reverb volume (left) */
-#define	SPU_COMMON_RVOLR		(0x01 <<  5) /* reverb volume (right) */
-#define	SPU_COMMON_CDVOLL		(0x01 <<  6) /* CD input volume (left) */
-#define	SPU_COMMON_CDVOLR		(0x01 <<  7) /* CD input volume (right) */
-#define	SPU_COMMON_CDREV		(0x01 <<  8) /* CD input reverb on/off */
-#define	SPU_COMMON_CDMIX		(0x01 <<  9) /* CD input on/off */
-#define	SPU_COMMON_EXTVOLL		(0x01 << 10) /* external digital input volume (left) */
-#define	SPU_COMMON_EXTVOLR		(0x01 << 11) /* external digital input volume (right) */
-#define	SPU_COMMON_EXTREV		(0x01 << 12) /* external digital input reverb on/off */
-#define	SPU_COMMON_EXTMIX		(0x01 << 13) /* external digital input on/off */
+#define	SPU_COMMON_MVOLL		(0x01 <<  0) /* マスタ音量(左)                     */
+#define	SPU_COMMON_MVOLR		(0x01 <<  1) /* マスタ音量(右)                     */
+#define	SPU_COMMON_MVOLMODEL		(0x01 <<  2) /* マスタ音量モード(左)               */
+#define	SPU_COMMON_MVOLMODER		(0x01 <<  3) /* マスタ音量モード(右)               */
+#define	SPU_COMMON_RVOLL		(0x01 <<  4) /* リバーブ音量(左)                   */
+#define	SPU_COMMON_RVOLR		(0x01 <<  5) /* リバーブ音量(右)                   */
+#define	SPU_COMMON_CDVOLL		(0x01 <<  6) /* CD 入力 音量 (左)                  */
+#define	SPU_COMMON_CDVOLR		(0x01 <<  7) /* CD 入力 音量 (右)                  */
+#define	SPU_COMMON_CDREV		(0x01 <<  8) /* CD 入力 リバーブオン/オフ          */
+#define	SPU_COMMON_CDMIX		(0x01 <<  9) /* CD 入力 オン/オフ                  */
+#define	SPU_COMMON_EXTVOLL		(0x01 << 10) /* 外部デジタル入力 音量 (左)         */
+#define	SPU_COMMON_EXTVOLR		(0x01 << 11) /* 外部デジタル入力 音量 (右)         */
+#define	SPU_COMMON_EXTREV		(0x01 << 12) /* 外部デジタル入力 リバーブオン/オフ */
+#define	SPU_COMMON_EXTMIX		(0x01 << 13) /* 外部デジタル入力 オン/オフ         */
 
 /* for Reverb setting */
 
-#define	SPU_REV_MODE		(0x01 <<  0) /* mode setting */
-#define	SPU_REV_DEPTHL		(0x01 <<  1) /* reverb depth (left) */
-#define	SPU_REV_DEPTHR		(0x01 <<  2) /* reverb depth (right) */
-#define	SPU_REV_DELAYTIME	(0x01 <<  3) /* Delay Time  (ECHO, DELAY only) */
-#define	SPU_REV_FEEDBACK	(0x01 <<  4) /* Feedback    (ECHO only) */
+#define	SPU_REV_MODE		(0x01 <<  0) /* モード設定                     */
+#define	SPU_REV_DEPTHL		(0x01 <<  1) /* リバーブの深さ(左)             */
+#define	SPU_REV_DEPTHR		(0x01 <<  2) /* リバーブの深さ(右)             */
+#define	SPU_REV_DELAYTIME	(0x01 <<  3) /* Delay Time (ECHO, DELAY のみ)  */
+#define	SPU_REV_FEEDBACK	(0x01 <<  4) /* Feedback   (ECHO のみ)   */
 
 #define SPU_REV_MODE_CHECK	(-1)
 #define SPU_REV_MODE_OFF	0
@@ -228,19 +228,20 @@ typedef struct {
 } SpuVolume;
 
 typedef struct {
-    unsigned long	voice;		/* set voice:
-                            SpuSetVoiceAttr: each voice is a bit array
-                            SpuGetVoiceAttr: voice is a bit value */
-    unsigned long	mask;		/* settings attribute bit (invalid with Get) */
-    SpuVolume		volume;		/* volume                         */
-    SpuVolume		volmode;	/* volume mode                    */
-    SpuVolume		volumex;	/* current volume (invalid with Set) */
-    unsigned short	pitch;		/* tone (pitch setting) */
-    unsigned short	note;		/* tone (note setting) */
-    unsigned short	sample_note;	/* tone (note setting) */
-    short		envx;		/* current envelope value (invalid with Set) */
-    unsigned long	addr;		/* waveform data start address */
-    unsigned long	loop_addr;	/* loop start address */
+    unsigned long	voice;		/* 設定ボイス:
+					   SpuSetVoiceAttr: 各ボイスは bit 列
+					   SpuGetVoiceAttr: ボイスは bit 値
+					   */
+    unsigned long	mask;		/* 設定属性ビット (Get では無効)	*/
+    SpuVolume		volume;		/* 音量					*/
+    SpuVolume		volmode;	/* 音量モード				*/
+    SpuVolume		volumex;	/* 現在の音量 (Set では無効)		*/
+    unsigned short	pitch;		/* 音程 (ピッチ指定)			*/
+    unsigned short	note;		/* 音程 (ノート指定)			*/
+    unsigned short	sample_note;	/* 音程 (ノート指定)			*/
+    short		envx;		/* 現在のエンベロープ値 (Set では無効)  */
+    unsigned long	addr;		/* 波形データ先頭アドレス		*/
+    unsigned long	loop_addr;	/* ループ開始アドレス			*/
     long		a_mode;		/* Attack rate mode			*/
     long		s_mode;		/* Sustain rate mode			*/
     long		r_mode;		/* Release rate mode			*/
@@ -254,18 +255,12 @@ typedef struct {
 } SpuVoiceAttr;
 
 typedef struct {
-    short	voiceNum;		/* voice number */
-    short	pad;			/* padding */
-    SpuVoiceAttr	attr;		/* voice attribute */
-} SpuLVoiceAttr;
-
-typedef struct {
-    unsigned long	mask;	  /* settings mask */
+    unsigned long	mask;	  /* 設定マスク		  */
     
-    long		mode;	  /* reverb mode */
-    SpuVolume		depth;	  /* reverb depth */
-    long                delay;	  /* Delay Time  (ECHO, DELAY only)   */
-    long                feedback; /* Feedback    (ECHO only)          */
+    long		mode;	  /* リバーブモード       */
+    SpuVolume		depth;	  /* リバーブの深さ	  */
+    long                delay;	  /* Delay Time (ECHO, DELAY のみ)  */
+    long                feedback; /* Feedback   (ECHO のみ)         */
 } SpuReverbAttr;
 
 #define SPU_DECODEDDATA_SIZE 0x200
@@ -279,19 +274,19 @@ typedef struct {
 typedef SpuDecodedData SpuDecodeData;
 
 typedef struct {
-    SpuVolume	volume;		  /* volume       */
-    long	reverb;		  /* reverb on/off */
-    long	mix;		  /* mixing on/off */
+    SpuVolume	volume;		  /* 音量		  */
+    long	reverb;		  /* リバーブオン/オフ	  */
+    long	mix;		  /* ミキシングオン/オフ  */
 } SpuExtAttr;
 
 typedef struct {
-    unsigned long	mask;	  /* settings mask */
+    unsigned long	mask;	  /* 設定マスク		  */
     
-    SpuVolume		mvol;	  /* master volume */
-    SpuVolume		mvolmode; /* master volume mode */
-    SpuVolume		mvolx;	  /* current master volume */
-    SpuExtAttr		cd;	  /* CD input attributes */
-    SpuExtAttr		ext;	  /* external digital input attributes */
+    SpuVolume		mvol;	  /* マスタ音量		  */
+    SpuVolume		mvolmode; /* マスタ音量モード	  */
+    SpuVolume		mvolx;	  /* 現在のマスタ音量	  */
+    SpuExtAttr		cd;	  /* CD 入力属性	  */
+    SpuExtAttr		ext;	  /* 外部デジタル入力属性 */
 } SpuCommonAttr;
 
 #ifndef __SPU_IRQCALLBACK_PROC
@@ -400,8 +395,6 @@ extern long SpuRSetVoiceAttr (long min_, long max_, SpuVoiceAttr *arg);
 extern void SpuNSetVoiceAttr (int vNum, SpuVoiceAttr *arg);
 extern void SpuNGetVoiceAttr (int vNum, SpuVoiceAttr *arg);
 
-extern void SpuLSetVoiceAttr (int num, SpuLVoiceAttr *argList);
-
 extern void SpuSetVoiceVolume (int vNum, short volL, short volR);
 extern void SpuSetVoiceVolumeAttr (int vNum, short volL, short volR,
 				   short volModeL, short volModeR);
@@ -481,7 +474,6 @@ extern void SpuGetReverbModeType (long *mode);
 extern void SpuGetReverbModeDepth (short *depth_left, short *depth_right);
 extern void SpuGetReverbModeDelayTime (long *delay);
 extern void SpuGetReverbModeFeedback (long *feedback);
-extern void SpuSetESA( long revAddr );
 #if defined(_LANGUAGE_C_PLUS_PLUS) || defined(__cplusplus) || defined(c_plusplus)
 }
 #endif

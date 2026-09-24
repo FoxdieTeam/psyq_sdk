@@ -5,7 +5,7 @@
  * File:kernel.h 	Rev. 3
 */
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.3$
  */
 #ifndef _R3000_H
 #include <r3000.h>
@@ -44,10 +44,10 @@
 #define SwCARD		(DescSW|0x01)	/* memory card */
 #define SwMATH          (DescSW|0x02)	/* libmath */
 
-#define RCntCNT0     	(DescRC|0x00)  	/* display pixel */
-#define RCntCNT1  	(DescRC|0x01)  	/* horizontal sync */
-#define RCntCNT2  	(DescRC|0x02)  	/* one-eighth of system clock */
-#define RCntCNT3  	(DescRC|0x03)  	/* vertical sync target value fixed to 1 */
+#define RCntCNT0     	(DescRC|0x00)  	/* 表示ピクセル */
+#define RCntCNT1  	(DescRC|0x01)  	/* 水平同期 */
+#define RCntCNT2  	(DescRC|0x02)  	/* システムクロック８分周 */
+#define RCntCNT3  	(DescRC|0x03)  	/* 垂直同期 ターゲット値は１に固定 */
 
 #define RCntMdINTR	0x1000
 #define RCntMdNOINTR	0x2000

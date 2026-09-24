@@ -2,7 +2,7 @@
 #define _LIBHMD_H_
 
 /*
- * $PSLibId: Run-time Library Release 4.7$
+ * $PSLibId: Run-time Library Release 4.3$
  */
 
 /*
@@ -749,86 +749,6 @@ extern  "C" {
 	extern u_long *GsU_0102000f(GsARGUNIT *);
 	extern u_long *GsU_01020016(GsARGUNIT *);
 	extern u_long *GsU_01020017(GsARGUNIT *);
-
-	/* tiled texture */
-	extern u_long *GsU_0000020b(GsARGUNIT *);
-	extern u_long *GsU_0000020f(GsARGUNIT *);
-	extern u_long *GsU_00000213(GsARGUNIT *);
-	extern u_long *GsU_00000217(GsARGUNIT *);
-	extern u_long *GsU_00020209(GsARGUNIT *);
-	extern u_long *GsU_0002020b(GsARGUNIT *);
-	extern u_long *GsU_0002020d(GsARGUNIT *);
-	extern u_long *GsU_0002020f(GsARGUNIT *);
-	extern u_long *GsU_00020211(GsARGUNIT *);
-	extern u_long *GsU_00020213(GsARGUNIT *);
-	extern u_long *GsU_00020215(GsARGUNIT *);
-	extern u_long *GsU_00020217(GsARGUNIT *);
-	extern u_long *GsU_00040249(GsARGUNIT *);
-	extern u_long *GsU_0004024d(GsARGUNIT *);
-	extern u_long *GsU_00040251(GsARGUNIT *);
-	extern u_long *GsU_00040255(GsARGUNIT *);
-	extern u_long *GsU_00100209(GsARGUNIT *);
-	extern u_long *GsU_0010020b(GsARGUNIT *);
-	extern u_long *GsU_0010020d(GsARGUNIT *);
-	extern u_long *GsU_0010020f(GsARGUNIT *);
-	extern u_long *GsU_00100211(GsARGUNIT *);
-	extern u_long *GsU_00100213(GsARGUNIT *);
-	extern u_long *GsU_00100215(GsARGUNIT *);
-	extern u_long *GsU_00100217(GsARGUNIT *);
-	extern u_long *GsU_00200209(GsARGUNIT *);
-	extern u_long *GsU_0020020d(GsARGUNIT *);
-	extern u_long *GsU_00200211(GsARGUNIT *);
-	extern u_long *GsU_00200215(GsARGUNIT *);
-	extern u_long *GsU_00240249(GsARGUNIT *);
-	extern u_long *GsU_0024024d(GsARGUNIT *);
-	extern u_long *GsU_00240251(GsARGUNIT *);
-	extern u_long *GsU_00240255(GsARGUNIT *);
-	extern u_long *GsU_00300209(GsARGUNIT *);
-	extern u_long *GsU_0030020d(GsARGUNIT *);
-	extern u_long *GsU_00300211(GsARGUNIT *);
-	extern u_long *GsU_00300215(GsARGUNIT *);
-	extern u_long *GsU_0100020f(GsARGUNIT *);
-	extern u_long *GsU_01000217(GsARGUNIT *);
-	extern u_long *GsU_0102020d(GsARGUNIT *);
-	extern u_long *GsU_0102020f(GsARGUNIT *);
-	extern u_long *GsU_01020215(GsARGUNIT *);
-	extern u_long *GsU_01020217(GsARGUNIT *);
-	extern u_long *GsU_01040249(GsARGUNIT *);
-	extern u_long *GsU_0104024d(GsARGUNIT *);
-	extern u_long *GsU_01040251(GsARGUNIT *);
-	extern u_long *GsU_01040255(GsARGUNIT *);
-	extern u_long *GsU_0120020d(GsARGUNIT *);
-	extern u_long *GsU_01200215(GsARGUNIT *);
-	extern u_long *GsU_01240249(GsARGUNIT *);
-	extern u_long *GsU_0124024d(GsARGUNIT *);
-	extern u_long *GsU_01240251(GsARGUNIT *);
-	extern u_long *GsU_01240255(GsARGUNIT *);
-	extern u_long *GsU_00140249(GsARGUNIT *);
-	extern u_long *GsU_0014024d(GsARGUNIT *);
-	extern u_long *GsU_00140251(GsARGUNIT *);
-	extern u_long *GsU_00140255(GsARGUNIT *);
-	extern u_long *GsU_00340249(GsARGUNIT *);
-	extern u_long *GsU_0034024d(GsARGUNIT *);
-	extern u_long *GsU_00340251(GsARGUNIT *);
-	extern u_long *GsU_00340255(GsARGUNIT *);
-	extern u_long *GsU_01140249(GsARGUNIT *);
-	extern u_long *GsU_0114024d(GsARGUNIT *);
-	extern u_long *GsU_01140251(GsARGUNIT *);
-	extern u_long *GsU_01140255(GsARGUNIT *);
-	extern u_long *GsU_01340249(GsARGUNIT *);
-	extern u_long *GsU_0134024d(GsARGUNIT *);
-	extern u_long *GsU_01340251(GsARGUNIT *);
-	extern u_long *GsU_01340255(GsARGUNIT *);
-	extern u_long *GsU_0020020b(GsARGUNIT *);
-	extern u_long *GsU_0020020f(GsARGUNIT *);
-	extern u_long *GsU_00200213(GsARGUNIT *);
-	extern u_long *GsU_00200217(GsARGUNIT *);
-	extern u_long *GsU_0030020b(GsARGUNIT *);
-	extern u_long *GsU_0030020f(GsARGUNIT *);
-	extern u_long *GsU_00300213(GsARGUNIT *);
-	extern u_long *GsU_00300217(GsARGUNIT *);
-	extern u_long *GsU_0120020f(GsARGUNIT *);
-	extern u_long *GsU_01200217(GsARGUNIT *);
 
 	extern u_long *GsU_00000000(GsARGUNIT *);
 

@@ -1,4 +1,4 @@
-/* $PSLibId: Run-time Library Release 4.7$ */
+/* $PSLibId: Run-time Library Release 4.3$ */
 #ifndef _LIBCD_H_
 #define _LIBCD_H_
 /*
@@ -224,7 +224,7 @@ typedef struct {
     u_long  dummy1;
     u_long  dummy2;
     CdlLOC  loc;
-} StHEADER;             /* CD-ROM STR structure */
+} StHEADER;             /* CD-ROM STR ç\ë¢ëÃ*/
 
 #define  StFREE       0x0000
 #define  StREWIND     0x0001
